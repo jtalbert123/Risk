@@ -8,8 +8,11 @@ public class Dice {
 
 	public static void main(String[] args) {
 		Dice d = new Dice();
-		System.out.println(d.getProbability(3, 1));
-		System.out.println(d.getProbability(1, 2));
+		for (int aDice = 1; aDice <= 3; aDice++) {
+			for (int dDice = 1; dDice <= 2; dDice++) {
+				System.out.printf("Attacker rolls %d dice, the defender %d dice, the attacker has a %3.0f%% chance of winning.\n", aDice, dDice, d.getProbability(aDice, dDice));
+			}
+		}
 	}
 
 	private Object[][][][] outcomes = new Object[3][2][][];

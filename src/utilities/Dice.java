@@ -1,4 +1,4 @@
-package probabilities;
+package utilities;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -8,10 +8,20 @@ public class Dice {
 
 	public static void main(String[] args) {
 		Dice d = new Dice();
+		System.out.printf("|%14s | %15s | %20s | %20s |\n", "Attacker Dice", "Defender Dice", "Attacker advantage", "Defender advantage");
+		System.out.print("|");
+		for (int i = 0; i < 79; i++)
+			System.out.print("-");
+		System.out.println("|");
 		for (int aDice = 1; aDice <= 3; aDice++) {
 			for (int dDice = 1; dDice <= 2; dDice++) {
-				System.out.printf("Attacker rolls %d dice, the defender %d dice, the attacker has a %3.0f%% chance of winning.\n", aDice, dDice, d.getProbability(aDice, dDice));
+				double adv = d.getProbability(aDice, dDice);
+				System.out.printf("|%14d | %15d | %19.0f%% | %20.0f%%|\n", aDice, dDice, adv, -adv);
 			}
+			System.out.print("|");
+			for (int i = 0; i < 79; i++)
+				System.out.print("-");
+			System.out.println("|");
 		}
 	}
 

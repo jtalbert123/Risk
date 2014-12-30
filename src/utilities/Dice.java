@@ -16,7 +16,7 @@ public class Dice {
 		for (int aDice = 1; aDice <= 3; aDice++) {
 			for (int dDice = 1; dDice <= 2; dDice++) {
 				double adv = d.getProbability(aDice, dDice);
-				System.out.printf("|%14d | %15d | %19.0f%% | %20.0f%%|\n", aDice, dDice, adv, -adv);
+				System.out.printf("|  Using %d dice |   Using %d dice  | %19.0f%% | %20.0f%%|\n", aDice, dDice, adv, -adv);
 			}
 			System.out.print("|");
 			for (int i = 0; i < 79; i++)

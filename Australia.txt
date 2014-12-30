@@ -1,0 +1,7 @@
+"Australia" 2
+"Indonesia" "West Australia" "New Guinea" "Siam"
+"New Guinea" "Indonesia" "East Australia" "West Australia"
+"West Australia" "New Guinea" "Indonesia" "East Australia"
+"East Australia" "New Guinea" "West Australia"
+"Asia" 7
+"Siam" "Indonesia"

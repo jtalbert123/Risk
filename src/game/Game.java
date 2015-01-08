@@ -9,8 +9,6 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.swing.undo.StateEdit;
-
 import com.sun.media.sound.InvalidFormatException;
 
 public class Game {
@@ -56,6 +54,7 @@ public class Game {
 				state.regions.add(r);
 			} else {
 				if (r == null) {
+					dataFile.close();
 					throw new InvalidFormatException(
 							"The file should start with a region.");
 				}
@@ -73,6 +72,7 @@ public class Game {
 				travelRoutes.put(c, list);
 			}
 		}
+		dataFile.close();
 		// add all countries' neighbors.
 		for (Country c : state.countries) {
 			HashSet<String> neighbors = travelRoutes.get(c);

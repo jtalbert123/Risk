@@ -8,18 +8,18 @@ public class Dice {
 
 	public static void main(String[] args) {
 		Dice d = new Dice();
-		System.out.printf("|%14s | %15s | %20s | %20s |\n", "Attacker Dice", "Defender Dice", "Attacker advantage", "Defender advantage");
+		System.out.printf("|%14s | %15s | %19s | %19s |\n", "Attacker Dice", "Defender Dice", "Attacker advantage", "Defender advantage");
 		System.out.print("|");
-		for (int i = 0; i < 79; i++)
+		for (int i = 0; i < 77; i++)
 			System.out.print("-");
 		System.out.println("|");
 		for (int aDice = 1; aDice <= 3; aDice++) {
 			for (int dDice = 1; dDice <= 2; dDice++) {
 				double adv = d.getProbability(aDice, dDice);
-				System.out.printf("|  Using %d dice |   Using %d dice  | %19.0f%% | %20.0f%%|\n", aDice, dDice, adv, -adv);
+				System.out.printf("|  Using %d dice |   Using %d dice  | %18.0f%% | %19.0f%%|\n", aDice, dDice, adv, -adv);
 			}
 			System.out.print("|");
-			for (int i = 0; i < 79; i++)
+			for (int i = 0; i < 77; i++)
 				System.out.print("-");
 			System.out.println("|");
 		}
